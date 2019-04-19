@@ -27,7 +27,7 @@ describe("Members", () => {
   };
 
   jest.mock("aws-sdk/clients/dynamodb", () => ({ DocumentClient: jest.fn() }));
-  jest.mock("../../repositories/Members.repository", () => ({
+  jest.mock("../../repositories/members.repository", () => ({
     MembersRepository: jest.fn(() => mockMemberRepository)
   }));
   jest.mock("../../utils/response.util", () => mockResponseUtil);
