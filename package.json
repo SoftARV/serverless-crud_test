@@ -1,0 +1,22 @@
+{
+  "name": "crud-assest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serverless offline start",
+    "seed": "node ./seed/initDb.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "^2.440.0",
+    "dotenv": "^7.0.0",
+    "jest": "^24.7.1",
+    "serverless-offline": "^4.9.4"
+  }
+}
