@@ -22,10 +22,6 @@ describe("Members", () => {
     parseWith: parser => mockParseWith
   };
 
-  const mockDynamoDbFactory = {
-    withProcessEnv: env => jest.fn()
-  };
-
   jest.mock("aws-sdk/clients/dynamodb", () => ({ DocumentClient: jest.fn() }));
   jest.mock("../../repositories/members.repository", () => ({
     MembersRepository: jest.fn(() => mockMemberRepository)
