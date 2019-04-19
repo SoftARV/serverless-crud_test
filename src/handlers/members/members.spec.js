@@ -127,7 +127,7 @@ describe("Members", () => {
         .spyOn(mockMemberRepository, "put")
         .mockImplementation(data => Promise.resolve(data));
 
-      const members = {
+      const member = {
         id: "4",
         name: "Eleazar"
       };

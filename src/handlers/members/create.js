@@ -1,14 +1,12 @@
 require("dotenv/config");
 
-const {
-  MembersRepositories
-} = require("../../repositories/Members.repository");
+const { MembersRepository } = require("../../repositories/Members.repository");
 const { withStatusCode } = require("../../utils/response.util");
 const { parseWith } = require("../../utils/request.util");
 const { withProcessEnv } = require("../../dynamodb.factory");
 
 const docClient = withProcessEnv(process.env)();
-const repository = new MembersRepositories(docClient);
+const repository = new MembersRepository(docClient);
 const created = withStatusCode(201);
 const parseJson = parseWith(JSON.parse);
 
